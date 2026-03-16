@@ -1,18 +1,18 @@
 name: Deploy to GitHub Pages
 
-# Run workflow on every push to the gh branch
+# Kör workflow vid push till main eller manuellt
 on:
   push:
-    branches: [ gh ]
+    branches: [ main ]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Rättigheter för GITHUB_TOKEN
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Endast en deployment åt gången
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -21,35 +21,33 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    # Checkout the code
-    - uses: actions/checkout@v4
+      # Checkout koden
+      - uses: actions/checkout@v4
 
-    # Install .NET SDK
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
-        
-    # Publish the app
-    - name: Publish .NET Project
-      run: dotnet publish QuizGame.WASM.csproj -c Release -o release --nologo
-      
-    # Change base-tag in index.html to match GitHub Pages repository name
-    - name: Change base-tag in index.html
-      run: |
-        sed -i 's/<base href="\/" \/>/<base href="\/QuizGame.WASM\/" \/>/g' release/wwwroot/index.html
+      # Installera .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
 
-    # Add .nojekyll file to disable Jekyll
-    - name: Add .nojekyll file
-      run: touch release/wwwroot/.nojekyll
-      
-    # Upload artifact for deployment
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: 'release/wwwroot'
+      # Bygg och publisha projektet
+      - name: Publish .NET Project
+        run: dotnet publish WeddingQuiz.csproj -c Release -o release --nologo
 
-  # Deployment job
+      # Lägg till .nojekyll för GitHub Pages
+      - name: Add .nojekyll
+        run: touch release/wwwroot/.nojekyll
+
+      # Skapa 404.html för GitHub Pages SPA-routing
+      - name: Create 404.html
+        run: cp release/wwwroot/index.html release/wwwroot/404.html
+
+      # Ladda upp artifacts för deployment
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'release/wwwroot'
+
   deploy:
     environment:
       name: github-pages
