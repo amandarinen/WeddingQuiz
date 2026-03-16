@@ -1,33 +1,61 @@
-name: Build and Deploy Blazor WebAssembly to GitHub Pages
+name: Deploy to GitHub Pages
 
+# Kör workflow vid push till main eller manuellt
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  workflow_dispatch:
+
+# Rättigheter för GITHUB_TOKEN
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Endast en deployment åt gången
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      # Checkout koden
+      - uses: actions/checkout@v4
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 8.0.x
+      # Installera .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore
+      # Bygg och publisha projektet
+      - name: Publish .NET Project
+        run: dotnet publish WeddingQuiz.csproj -c Release -o release --nologo
 
-    - name: Build project
-      run: dotnet publish -c Release -o publish --base-href /WeddingQuiz/
+      # Ändra base-tag i index.html till ditt GitHub Pages repo
+      - name: Change base-tag in index.html
+        run: |
+          sed -i 's|<base href="/" />|<base href="/WeddingQuiz/" />|g' release/wwwroot/index.html
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./publish/wwwroot
+      # Lägg till .nojekyll för att GitHub Pages inte ska tolka _ mappar
+      - name: Add .nojekyll file
+        run: touch release/wwwroot/.nojekyll
+
+      # Ladda upp artifacts för deployment
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'release/wwwroot'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
