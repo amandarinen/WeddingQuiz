@@ -1,0 +1,2 @@
+C:\Users\amand\source\repos\WeddingQuiz\bin\Release\net8.0\publish\e_sqlite3.a
+C:\Users\amand\source\repos\WeddingQuiz\bin\Release\net8.0\publish\web.config

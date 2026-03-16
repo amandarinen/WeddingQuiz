@@ -1,0 +1,55 @@
+﻿@inherits LayoutComponentBase
+@using MudBlazor
+
+<MudThemeProvider Theme="WeddingTheme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="0" Color="Color.Secondary" Style="background-color:#FFFFFF; color:#3A3A3A; border-bottom: 1px solid #eee;">
+        <MudText Typo="Typo.h6" Style="font-weight: 700;">💍 WeddingQuiz</MudText>
+        <MudSpacer />
+
+        <MudButton Href="/" Variant="Variant.Text" Style="text-transform:none; color:#3A3A3A; text-decoration:none;" DisableRipple="true">
+            HOME
+        </MudButton>
+
+        <MudMenu Label="Quiz" Variant="Variant.Text" Style="text-transform:none;" EndIcon="@Icons.Material.Filled.KeyboardArrowDown">
+            <MudMenuItem Href="/quiz">Möhippa/Svensexa</MudMenuItem>
+            <MudMenuItem Href="/della-quiz">Quiz om Della</MudMenuItem>
+            <MudMenuItem Href="/rasmus-quiz">Quiz om Rasmus</MudMenuItem>
+        </MudMenu>
+    </MudAppBar>
+
+    <MudMainContent Style="min-height:100vh; display:flex; justify-content:center; align-items:center; background-image:url('/images/floral-background.png'); background-size:cover; background-position:center;">
+        <MudContainer MaxWidth="MaxWidth.Medium">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+<style>
+    /* Mapping hex codes to the CSS variables used in your Home page */
+    :root {
+        --sage-light: #E8EFE8; /* A lighter version of your Primary #9CAF9C */
+        --dusty-rose: #D8A7A7; /* Your Secondary color */
+    }
+</style>
+
+@code
+{
+    private MudTheme WeddingTheme = new MudTheme()
+    {
+        PaletteLight = new PaletteLight
+        {
+            Primary = "#9CAF9C", 
+            Secondary = "#D8A7A7",   
+            Background = "#FAF8F6",   
+            AppbarBackground = "#FFFFFF",
+            AppbarText = "#3A3A3A",
+            TextPrimary = "#3A3A3A",
+            Surface = "#FFFFFF"
+        },
+        
+    };
+}

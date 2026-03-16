@@ -1,0 +1,166 @@
+﻿@page "/della-quiz"
+@using WeddingQuiz.Models
+
+<PageTitle>Della Quiz</PageTitle>
+
+<MudPaper Class="mx-auto pa-6" Style="max-width:700px; text-align:center; border-radius:20px; background-color:var(--sage-light);">
+
+    <MudText Typo="Typo.h2" Class="mb-6" Style="color:var(--dusty-rose); font-size:2.5rem; font-weight:700;">
+        Della Quiz
+    </MudText>
+
+    <MudText Typo="Typo.h5" Class="mb-6">
+        Detta quiz har frågor om Della som Rasmus ska svara på!
+    </MudText>
+
+    @if (showResult)
+    {
+        <MudCard Class="pa-6 mt-4" Style="border-radius:20px; display:flex; flex-direction:column; align-items:center;">
+            <MudText Typo="Typo.h4" Class="mb-3">Quiz Avslutad!</MudText>
+            <MudText Typo="Typo.h5" Class="mb-4">Din poäng: @score / @questions.Count</MudText>
+
+            <!-- Wrapper för knappen -->
+            <div style="display:flex; justify-content:center; width:100%; min-height:60px;">
+                <MudButton Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           Style="width:220px; height:50px; border-radius:16px;"
+                           OnClick="RestartQuiz">
+                    Spela igen
+                </MudButton>
+            </div>
+        </MudCard>
+    }
+    else
+    {
+        <MudText Typo="Typo.h6" Class="mb-3">
+            Fråga @(@currentQuestion + 1) / @questions.Count
+        </MudText>
+
+        <MudCard Class="pa-4 mb-4" Style="border-radius:20px; display:flex; flex-direction:column; align-items:center;">
+            <MudText Typo="Typo.h6" Class="mb-3">@questions[currentQuestion].Question</MudText>
+
+            <MudGrid Class="mt-3 mb-4" Spacing="2">
+                @foreach (var answer in questions[currentQuestion].Answers)
+                {
+                    <MudItem xs="12" sm="6" Class="d-flex justify-center">
+                        <MudButton Variant="Variant.Filled"
+                                   Color="@GetButtonColor(answer)"
+                                   Class="ma-1"
+                                   Disabled="@answered"
+                                   Style="width: 220px; height: 60px; font-size:1.1rem; font-weight:600; border-radius:16px;"
+                                   OnClick="@(() => SelectAnswer(answer))">
+                            @answer
+                        </MudButton>
+                    </MudItem>
+                }
+            </MudGrid>
+
+            @if (answered)
+            {
+                <MudText Typo="Typo.h6" Class="mb-3" Color="@feedbackColor">
+                    @feedbackMessage
+                </MudText>
+            }
+            else
+            {
+                <!-- Reservera plats även om inget svar visats -->
+                <div style="height:2rem;"></div>
+            }
+
+            <!-- Wrapper för “Nästa fråga”-knappen -->
+            <div style="display:flex; justify-content:center; width:100%; min-height:60px; margin-top:1rem;">
+                @if (answered)
+                {
+                    <MudButton Variant="Variant.Filled"
+                               Color="Color.Primary"
+                               Style="width:180px; height:50px; border-radius:20px;"
+                               OnClick="NextQuestion">
+                        Nästa fråga
+                    </MudButton>
+                }
+            </div>
+        </MudCard>
+    }
+</MudPaper>
+
+@code {
+    int currentQuestion = 0;
+    int score = 0;
+    bool answered = false;
+    bool showResult = false;
+    string feedbackMessage = "";
+    Color feedbackColor = Color.Default;
+    string selectedAnswer = "";
+
+    List<QuizQuestion> questions = new()
+    {
+        new QuizQuestion
+        {
+            Question = "Vad är Dellas favoritblomma?",
+            CorrectAnswer = "Rosor",
+            Answers = new() { "Tulpaner", "Rosor", "Liljor", "Orkidéer" }
+        },
+        new QuizQuestion
+        {
+            Question = "Vilken färg gillar Della mest?",
+            CorrectAnswer = "Blå",
+            Answers = new() { "Röd", "Grön", "Blå", "Gul" }
+        },
+        new QuizQuestion
+        {
+            Question = "Vad gör Della helst på en ledig dag?",
+            CorrectAnswer = "Läser en bok",
+            Answers = new() { "Läser en bok", "Tränar", "Shoppar", "Serier på Netflix" }
+        }
+    };
+
+    void SelectAnswer(string answer)
+    {
+        if (answered) return;
+
+        selectedAnswer = answer;
+        answered = true;
+
+        if (answer == questions[currentQuestion].CorrectAnswer)
+        {
+            score++;
+            feedbackMessage = "Rätt! Wohoo! ";
+            feedbackColor = Color.Success;
+        }
+        else
+        {
+            feedbackMessage = $"Fel... Rätt svar: {questions[currentQuestion].CorrectAnswer}";
+            feedbackColor = Color.Error;
+        }
+    }
+
+    void NextQuestion()
+    {
+        answered = false;
+        selectedAnswer = "";
+        feedbackMessage = "";
+
+        if (currentQuestion < questions.Count - 1)
+            currentQuestion++;
+        else
+            showResult = true;
+    }
+
+    void RestartQuiz()
+    {
+        currentQuestion = 0;
+        score = 0;
+        answered = false;
+        showResult = false;
+        selectedAnswer = "";
+        feedbackMessage = "";
+    }
+
+    Color GetButtonColor(string answer)
+    {
+        if (!answered) return Color.Primary;
+        if (answer == questions[currentQuestion].CorrectAnswer) return Color.Success;
+        if (answer == selectedAnswer) return Color.Error;
+        return Color.Primary;
+    }
+}
