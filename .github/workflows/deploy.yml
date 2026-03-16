@@ -34,13 +34,13 @@ jobs:
       - name: Publish .NET Project
         run: dotnet publish WeddingQuiz.csproj -c Release -o release --nologo
 
-      # Lägg till .nojekyll för GitHub Pages
-      - name: Add .nojekyll
+      # Ändra base-tag i index.html till ditt GitHub Pages repo
+      - name: Change base-tag in index.html
+        run: |
+          sed -i 's|<base href="/" />|<base href="/WeddingQuiz/" />|g' release/wwwroot/index.html
+      # Lägg till .nojekyll för att GitHub Pages inte ska tolka _ mappar
+      - name: Add .nojekyll file
         run: touch release/wwwroot/.nojekyll
-
-      # Skapa 404.html för GitHub Pages SPA-routing
-      - name: Create 404.html
-        run: cp release/wwwroot/index.html release/wwwroot/404.html
 
       # Ladda upp artifacts för deployment
       - name: Upload artifact
