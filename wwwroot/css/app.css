@@ -129,7 +129,7 @@ code {
 
 
 body {
-    background-image: url('/images/WeddingQuizFloralBackground.png');
+    background-image: url('images/WeddingQuizFloralBackground.png');
     background-size: cover; /* Fyll hela skärmen */
     background-position: center; /* Centrera bilden */
     background-repeat: no-repeat; /* Upprepa inte */
