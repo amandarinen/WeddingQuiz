@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeddingQuiz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b03553347462a7b2af68d74dc5c5a874099366b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edeb63038ca133006d75875580741f79fa0b2649")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeddingQuiz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeddingQuiz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
