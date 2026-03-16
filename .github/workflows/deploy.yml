@@ -43,6 +43,10 @@ jobs:
       - name: Add .nojekyll file
         run: touch release/wwwroot/.nojekyll
 
+        # Lägg till efter .nojekyll
+      - name: Add _redirects file
+        run: echo "/* /index.html 200" > release/wwwroot/_redirects
+
       # Ladda upp artifacts för deployment
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
