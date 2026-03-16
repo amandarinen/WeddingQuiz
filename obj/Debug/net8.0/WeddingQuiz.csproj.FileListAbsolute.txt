@@ -1434,3 +1434,13 @@ C:\Users\amand\source\repos\WeddingQuiz\obj\Debug\net8.0\compressed\w64cm7w0rs.g
 C:\Users\amand\source\repos\WeddingQuiz\obj\Debug\net8.0\compressed\1amwsc09ml.gz
 C:\Users\amand\source\repos\WeddingQuiz\obj\Debug\net8.0\compressed\5h1s5ujos2.gz
 C:\Users\amand\source\repos\WeddingQuiz\obj\Debug\net8.0\WeddingQuiz.sourcelink.json
+C:\Users\amand\source\repos\WeddingQuiz\bin\Debug\net8.0\publish\web.config
+C:\Users\amand\source\repos\WeddingQuiz\bin\Debug\net8.0\release\web.config
+C:\Users\amand\source\repos\WeddingQuiz\bin\Debug\net8.0\docs\sample-data\weather.json
+C:\Users\amand\source\repos\WeddingQuiz\bin\Debug\net8.0\docs\_framework\blazor.boot.json
+C:\Users\amand\source\repos\WeddingQuiz\bin\Debug\net8.0\publish\wwwroot\sample-data\weather.json
+C:\Users\amand\source\repos\WeddingQuiz\bin\Debug\net8.0\publish\wwwroot\_framework\blazor.boot.json
+C:\Users\amand\source\repos\WeddingQuiz\bin\Debug\net8.0\release\publish\wwwroot\sample-data\weather.json
+C:\Users\amand\source\repos\WeddingQuiz\bin\Debug\net8.0\release\publish\wwwroot\_framework\blazor.boot.json
+C:\Users\amand\source\repos\WeddingQuiz\bin\Debug\net8.0\release\wwwroot\sample-data\weather.json
+C:\Users\amand\source\repos\WeddingQuiz\bin\Debug\net8.0\release\wwwroot\_framework\blazor.boot.json
