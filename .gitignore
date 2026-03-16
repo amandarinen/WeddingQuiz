@@ -1,0 +1,20 @@
+# Byggmappar
+bin/
+obj/
+
+# Visual Studio filer
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet paket
+*.nupkg
+packages/
+*.snupkg
+.nuget/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user

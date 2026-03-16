@@ -1433,3 +1433,7 @@ C:\Users\amand\source\repos\WeddingQuiz\obj\Release\net8.0\WeddingQuiz.dll
 C:\Users\amand\source\repos\WeddingQuiz\obj\Release\net8.0\refint\WeddingQuiz.dll
 C:\Users\amand\source\repos\WeddingQuiz\obj\Release\net8.0\WeddingQuiz.pdb
 C:\Users\amand\source\repos\WeddingQuiz\obj\Release\net8.0\ref\WeddingQuiz.dll
+C:\Users\amand\source\repos\WeddingQuiz\obj\Release\net8.0\WeddingQuiz.sourcelink.json
+C:\Users\amand\source\repos\WeddingQuiz\bin\Release\net8.0\publish\web.config
+C:\Users\amand\source\repos\WeddingQuiz\bin\Release\net8.0\publish\wwwroot\sample-data\weather.json
+C:\Users\amand\source\repos\WeddingQuiz\bin\Release\net8.0\publish\wwwroot\_framework\blazor.boot.json

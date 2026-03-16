@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "WeddingQuiz",
   "resources": {
-    "hash": "sha256-UcnwuXAY8t2di3hwmow0h+WNlUGQf9vCXcI1MKdnwNA=",
+    "hash": "sha256-9LW1KIefZKkkda2jjANX2HZUbR6uywKiO9Cf4VYpz6E=",
     "jsModuleNative": {
       "dotnet.native.8.0.23.hx4pyt0qqv.js": "sha256-NljIbpK/1KCj0+knpX8U77Rbl5kTtfFIuFjK7AuczEw="
     },
@@ -236,10 +236,10 @@
       "mscorlib.wasm": "sha256-oV7k+vcNqj7FS6Y/lMtdhVlq3myDH55/wVxmO4QPrw4=",
       "netstandard.wasm": "sha256-XMXMB0WW//vbNNgQiFAqYo7IJ2C4yQX590aoAbOtTB4=",
       "System.Private.CoreLib.wasm": "sha256-tuhzUgbFn7ji3yhMSxyBLHAps9h0RsFnq+8pUoizHiw=",
-      "WeddingQuiz.wasm": "sha256-ZVrYCjecHU2k98hZMTpvuPsHbTJnHPWzXXwAM8WAMlk="
+      "WeddingQuiz.wasm": "sha256-DNYiJWktg+R+4Z/leP227i5kpJ3E4yq0y9WR+XHC+x8="
     },
     "pdb": {
-      "WeddingQuiz.pdb": "sha256-Em4/OXOgjdGVWWmulL0sKJyttZ1LV0ovOJDBWmZ+V+k="
+      "WeddingQuiz.pdb": "sha256-MOh9OUKbG7pqeFEMd5HsXqOX2EUtNQVR8F7EJs2Axk0="
     },
     "satelliteResources": {
       "cs": {
