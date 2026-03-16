@@ -1433,3 +1433,4 @@ C:\Users\amand\source\repos\WeddingQuiz\obj\Debug\net8.0\compressed\pkky02b13e.g
 C:\Users\amand\source\repos\WeddingQuiz\obj\Debug\net8.0\compressed\w64cm7w0rs.gz
 C:\Users\amand\source\repos\WeddingQuiz\obj\Debug\net8.0\compressed\1amwsc09ml.gz
 C:\Users\amand\source\repos\WeddingQuiz\obj\Debug\net8.0\compressed\5h1s5ujos2.gz
+C:\Users\amand\source\repos\WeddingQuiz\obj\Debug\net8.0\WeddingQuiz.sourcelink.json
