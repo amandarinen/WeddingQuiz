@@ -46,8 +46,7 @@
                                    Color="@GetButtonColor(answer)"
                                    Class="ma-1"
                                    Disabled="@answered"
-                                   Style="width: 220px; height: 60px; font-size:1.1rem; font-weight:600; border-radius:16px;"
-                                   OnClick="@(() => SelectAnswer(answer))">
+                                   Style="width: 220px; min-height: 60px; padding:10px; font-size:0.9rem; font-weight:600; border-radius:16px; white-space: normal; line-height:1.3; text-align:center;" OnClick="@(() => SelectAnswer(answer))">
                             @answer
                         </MudButton>
                     </MudItem>
@@ -92,23 +91,125 @@
     List<QuizQuestion> questions = new()
     {
         new QuizQuestion
-        {
-            Question = "Vad är Dellas favoritblomma?",
-            CorrectAnswer = "Rosor",
-            Answers = new() { "Tulpaner", "Rosor", "Liljor", "Orkidéer" }
-        },
-        new QuizQuestion
-        {
-            Question = "Vilken färg gillar Della mest?",
-            CorrectAnswer = "Blå",
-            Answers = new() { "Röd", "Grön", "Blå", "Gul" }
-        },
-        new QuizQuestion
-        {
-            Question = "Vad gör Della helst på en ledig dag?",
-            CorrectAnswer = "Läser en bok",
-            Answers = new() { "Läser en bok", "Tränar", "Shoppar", "Serier på Netflix" }
-        }
+    {
+        Question = "Vad är Dellas favoritfärg?",
+        CorrectAnswer = "Blå",
+        Answers = new() { "Grön", "Gul", "Rosa", "Blå" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilket är hennes favoritgodis?",
+        CorrectAnswer = "Choklad",
+        Answers = new() { "Ostbågar", "Choklad", "Chips & Dipp", "Lakrits" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken är hennes favoritfilm?",
+        CorrectAnswer = "Harry Potter",
+        Answers = new() { "Sagan om ringen", "Harry Potter", "Twilight", "Titanic" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken var hennes första skola?",
+        CorrectAnswer = "Engelbrekt",
+        Answers = new() { "Engelbrekt", "Vasaskolan", "Täby Friskola", "Norra Real" }
+    },
+    new QuizQuestion
+    {
+        Question = "Hur lång tid tar det för Della att göra sig i ordning (enligt henne själv)?",
+        CorrectAnswer = "1 timme",
+        Answers = new() { "45 minuter", "1,5 timme", "1 timme", "2 timmar" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad var hennes favoritämne i skolan?",
+        CorrectAnswer = "Matte",
+        Answers = new() { "Svenska", "Idrott", "Matte", "Bild" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilket var hennes första jobb?",
+        CorrectAnswer = "Bagare på Cupcake STHLM",
+        Answers = new() { "Barista på Mr Cake", "Bagare på Cupcake STHLM", "Servitris på Vete-Katten", "Diskplockare på Espresso House" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilket djur beskriver Della sig själv som?",
+        CorrectAnswer = "Koala: Mysig och klängig",
+        Answers = new() { "Katt: Egen och gosig", "Koala: Mysig och klängig", "Hund: Taggad och positiv", "Delfin: smart och flexibel" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad är hennes största skräck?",
+        CorrectAnswer = "Fastna i en hiss",
+        Answers = new() { "Spindlar i örat", "Störta med flygplan", "Fastna i en hiss", "Orm ur toaletten" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken av följande är drömmen för Della?",
+        CorrectAnswer = "Dyka i Hawaii",
+        Answers = new() { "Surfa i Fiji", "Dyka i Hawaii", "Vandra i Himalaya", "Campa i Machu Picchu" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad är hennes favorittakeout?",
+        CorrectAnswer = "Burgare",
+        Answers = new() { "Sushi", "Pizza", "Burgare", "Thai" }
+    },
+    new QuizQuestion
+    {
+        Question = "Enligt henne själv, vilken är hennes bästa talang?",
+        CorrectAnswer = "Planera",
+        Answers = new() { "Sjunga", "Planera", "Rita", "Sy" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilket var hennes favoritbarnprogram?",
+        CorrectAnswer = "Powerpuffpinglorna",
+        Answers = new() { "Pokémon", "Kim Possible", "Hannah Montana", "Powerpuffpinglorna" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad är hennes drömjobb?",
+        CorrectAnswer = "COO",
+        Answers = new() { "COO", "CFO", "CEO", "CIO" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken låt älskar hon?",
+        CorrectAnswer = "I'm Blue",
+        Answers = new() { "Barbie Girl", "I'm Blue", "Dancing Queen", "Toxic" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken kompis ringer hon i en paniksituation?",
+        CorrectAnswer = "Emelie",
+        Answers = new() { "Sofia P", "Sofia F", "Emelie", "Amanda" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken var hennes första mobiltelefon?",
+        CorrectAnswer = "Sony Ericsson",
+        Answers = new() { "Nokia 3310", "iPhone", "Sony Ericsson", "Samsung" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad är hennes guilty pleasure?",
+        CorrectAnswer = "Sträcktitta serier",
+        Answers = new() { "Äta godis när Rasmus sover", "Sträcktitta serier", "Spela DnD online", "Skvallra med kompisar" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad är hennes roligaste gymnasieminne?",
+        CorrectAnswer = "Klassresa i Val d’Isère",
+        Answers = new() { "Resa med föräldrarna i Verbier", "Födelsedagsresa i Tignes", "Klassresa i Val d’Isère", "Spa-weekend i Val Thorens" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad gör hon först på morgonen?",
+        CorrectAnswer = "Klappar på Tor",
+        Answers = new() { "Klappar på Rasmus", "Dricker kaffe", "Snoozar", "Klappar på Tor" }
+    }
     };
 
     void SelectAnswer(string answer)

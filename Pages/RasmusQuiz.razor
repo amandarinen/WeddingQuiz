@@ -46,8 +46,7 @@
                                    Color="@GetButtonColor(answer)"
                                    Class="ma-1"
                                    Disabled="@answered"
-                                   Style="width: 220px; height: 60px; font-size:1.1rem; font-weight:600; border-radius:16px;"
-                                   OnClick="@(() => SelectAnswer(answer))">
+                                   Style="width: 220px; min-height: 60px; padding:10px; font-size:0.9rem; font-weight:600; border-radius:16px; white-space: normal; line-height:1.3; text-align:center;" OnClick="@(() => SelectAnswer(answer))">
                             @answer
                         </MudButton>
                     </MudItem>
@@ -92,23 +91,125 @@
     List<QuizQuestion> questions = new()
     {
         new QuizQuestion
-        {
-            Question = "Vad gillar Rasmus mest att äta?",
-            CorrectAnswer = "Pizza",
-            Answers = new() { "Pizza", "Sushi", "Burgare", "Sallad" }
-        },
-        new QuizQuestion
-        {
-            Question = "Vilken sport gillar Rasmus mest?",
-            CorrectAnswer = "Fotboll",
-            Answers = new() { "Fotboll", "Tennis", "Basket", "Simning" }
-        },
-        new QuizQuestion
-        {
-            Question = "Vad gör Rasmus helst en ledig dag?",
-            CorrectAnswer = "Spelar datorspel",
-            Answers = new() { "Spelar datorspel", "Tränar", "Läser", "Går på bio" }
-        }
+    {
+        Question = "Vad är Rasmus favoritfärg?",
+        CorrectAnswer = "Marinblå",
+        Answers = new() { "Vinröd", "Plommonlila", "Skogsrön", "Marinblå" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilket spel gillar han mest?",
+        CorrectAnswer = "Baldur’s Gate 3",
+        Answers = new() { "Elden Ring", "Baldur’s Gate 3", "Apex Legends", "Skyrim" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad maträtt skulle Rasmus laga för att imponera?",
+        CorrectAnswer = "Chili",
+        Answers = new() { "Pasta", "Chili", "Tacos", "Risotto" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad var hans favoritämne i skolan?",
+        CorrectAnswer = "Musik",
+        Answers = new() { "Engelska", "Tyska", "Musik", "Historia" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken kompis skulle Rasmus ringa i en nödsituation?",
+        CorrectAnswer = "Ludvig",
+        Answers = new() { "CM", "Christian", "Ludvig", "Anton" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad är hans favoritsnacks?",
+        CorrectAnswer = "Popcorn",
+        Answers = new() { "Chips", "Godis", "Popcorn", "Nötter" }
+    },
+    new QuizQuestion
+    {
+        Question = "Var någonstans var Rasmus första jobb?",
+        CorrectAnswer = "Gröna Lund",
+        Answers = new() { "ICA", "Gröna Lund", "McDonalds", "Skansen" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad är hans största hobby just nu?",
+        CorrectAnswer = "Warhammer",
+        Answers = new() { "Musik", "DND", "Warhammer", "Programmering" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad är hans guilty pleasure?",
+        CorrectAnswer = "Realityserier som Della introducerat",
+        Answers = new() { "Göra manikyr hemma", "Matlagningsreels på Instagram", "TikTok", "Realityserier som Della introducerat" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken serie älskade han som liten?",
+        CorrectAnswer = "Simpsons",
+        Answers = new() { "Pokémon", "Simpsons", "Digimon", "Sailor Moon" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad kallade han sig som liten?",
+        CorrectAnswer = "Mashuuck",
+        Answers = new() { "Raskuush", "Rashii", "Jashuu", "Mashuuck" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken låt får honom alltid att sjunga med?",
+        CorrectAnswer = "Let it snow",
+        Answers = new() { "Bohemian Rhapsody", "Let it snow", "Country Roads", "Fångad av en stormvind" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad är hans största skräck?",
+        CorrectAnswer = "Trånga utrymmen",
+        Answers = new() { "Höjder", "Spindlar", "Trånga utrymmen", "Åska" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken konstig vana har han?",
+        CorrectAnswer = "Slänger inte strumpor/kalsonger med hål i",
+        Answers = new() { "Har ketchup på sin sallad", "Stänger inte toalettlocket", "Sjunger i sömnen", "Slänger inte strumpor/kalsonger med hål i" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilket djur beskriver Rasmus sig själv som?",
+        CorrectAnswer = "Sengångare: lite seg, chill, kan sitta tyst i timmar",
+        Answers = new() { "Hund: valpig, ivrig och hyper", "Val: intressant sång, mäktig och enslig", "Sengångare: lite seg, chill, kan sitta tyst i timmar", "Björn: Kramgo, varm och hårig" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilket smeknamn gillar han mest?",
+        CorrectAnswer = "Raz / babe",
+        Answers = new() { "Razmaz / älskling", "Raz / babe", "Razzmatazz / boo", "Big Boss / daddy" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad dricker han helst på fest?",
+        CorrectAnswer = "Öl",
+        Answers = new() { "Vin", "Drinkar", "Öl", "Cider" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad är det första som händer på morgonen?",
+        CorrectAnswer = "Får Tor-pussar",
+        Answers = new() { "Kollar jobb-mail", "Dricker kaffe", "Får Tor-pussar", "Drar upp persiennerna för lampan är trasig" }
+    },
+    new QuizQuestion
+    {
+        Question = "Rasmus kan några programmeringsspråk, vilka?",
+        CorrectAnswer = "C#, JavaScript, PowerShell, Bash",
+        Answers = new() { "Python, Java, COBOL, Swift", "C#, JavaScript, PowerShell, Bash", "C, C++, Rust, GO", "Perl, F#, Kotlin, R" }
+    },
+    new QuizQuestion
+    {
+        Question = "När Rasmus fyller år, vad vill han helst ha i present?",
+        CorrectAnswer = "Warhammer-grejer",
+        Answers = new() { "DnD-kit", "Vinylskivor", "Warhammer-grejer", "Whiskey" }
+    }
     };
 
     void SelectAnswer(string answer)
