@@ -46,7 +46,7 @@
                                    Color="@GetButtonColor(answer)"
                                    Class="ma-1"
                                    Disabled="@answered"
-                                   Style="width: 220px; height: 60px; font-size:1.1rem; font-weight:600; border-radius:16px;"
+                                   Style="width: 220px; min-height: 60px; padding:10px; font-size:0.9rem; font-weight:600; border-radius:16px; white-space: normal; line-height:1.3; text-align:center;"
                                    OnClick="@(() => SelectAnswer(answer))">
                             @answer
                         </MudButton>
@@ -92,23 +92,95 @@
     List<QuizQuestion> questions = new()
     {
         new QuizQuestion
-        {
-            Question = "Var träffades Della och Rasmus första gången?",
-            CorrectAnswer = "Via Tinder",
-            Answers = new() { "På jobbet", "Via Tinder", "På universitetet", "På en fest" }
-        },
-        new QuizQuestion
-        {
-            Question = "Vem tog första steget?",
-            CorrectAnswer = "Della",
-            Answers = new() { "Della", "Rasmus", "Båda", "Ingen minns" }
-        },
-        new QuizQuestion
-        {
-            Question = "Vad gör de helst en ledig söndag?",
-            CorrectAnswer = "Slökollar serier i soffan",
-            Answers = new() { "Slökollar serier i soffan", "Långpromenad", "Städar", "Planerar framtiden" }
-        }
+    {
+        Question = "Vad var deras första dejt?",
+        CorrectAnswer = "Promenad i –20 grader",
+        Answers = new() { "Bio och middag", "Promenad i –20 grader", "Picknick i 30+ grader", "Middag hemma och film" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vem är mest morgontrött?",
+        CorrectAnswer = "Della",
+        Answers = new() { "Tor", "Rasmus", "Ingen", "Della" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vem är mest impulsiv?",
+        CorrectAnswer = "Della",
+        Answers = new() { "Della", "Rasmus", "Båda", "Ingen" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken var deras bästa resa tillsammans?",
+        CorrectAnswer = "Lissabon",
+        Answers = new() { "Budapest", "Lissabon", "Kroatien", "Skåne" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad tittar de helst på under en filmkväll?",
+        CorrectAnswer = "Komedi/Action",
+        Answers = new() { "Skräck/Thriller", "Komedi/Action", "Dokumentär/Deckare", "Drama/Sci-Fi" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vad glömmer de oftast (R= Rasmus, D= Della)?",
+        CorrectAnswer = "D: Glasögonen / R: Bilnyckeln",
+        Answers = new() { "D: Mobilen / R: Mössan", "D: Halsduk / R: Plånbok", "D: Glasögonen / R: Bilnyckeln", "D: Tjocktröja / R: Solglasögon" }
+    },
+    new QuizQuestion
+    {
+        Question = "Hur ser deras perfekta dejt ut?",
+        CorrectAnswer = "Promenad + tidig middag",
+        Answers = new() { "Brunch + spa", "Promenad + tidig middag", "Sen middag + klubba", "Film + snabbmat" }
+    },
+     new QuizQuestion
+    {
+        Question = "Vem sa 'jag älskar dig' först?",
+        CorrectAnswer = "Della",
+        Answers = new() { "Della", "Rasmus", "Båda samtidigt", "Ingen än" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken musik spelas oftast hemma hos Rasmus och Della?",
+        CorrectAnswer = "Lounge",
+        Answers = new() { "Rock", "Lounge", "Hip hop", "EDM" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vem gör flest romantiska gester?",
+        CorrectAnswer = "Rasmus",
+        Answers = new() { "Della", "Rasmus", "Båda", "Ingen" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vem stänger fönstret först?",
+        CorrectAnswer = "Della: 'Det är för kallt!'",
+        Answers = new() { "Della: 'Det är för kallt!'", "Rasmus: 'Du släpper ut värmen!'", "Tor: 'Voff voff (jag såg en ekorre!)'", "Grannen: 'Ni väsnas för mycket!'" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vem snarkar mest?",
+        CorrectAnswer = "Rasmus",
+        Answers = new() { "Della", "Tor", "Alla tre", "Rasmus" }
+    },
+    new QuizQuestion
+    {
+        Question = "Du ska bjuda Rasmus och Della på middag! Vad lagar du?",
+        CorrectAnswer = "Tacos",
+        Answers = new() { "Skaldjursplatå", "Grillat", "Löksoppa", "Tacos" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vilken take-away beställer de oftast?",
+        CorrectAnswer = "Pizza",
+        Answers = new() { "Sushi", "Thai", "Pizza", "Indiskt" }
+    },
+    new QuizQuestion
+    {
+        Question = "Vem är mest tävlingsinriktad?",
+        CorrectAnswer = "Della",
+        Answers = new() { "Della", "Rasmus", "Båda", "Ingen" }
+    }
     };
 
     void SelectAnswer(string answer)

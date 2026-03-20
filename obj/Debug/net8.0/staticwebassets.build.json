@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yfr8ApgAwr3SEmY5I6W81ghYGyrN43mnJKZc9d5+CS4=",
+  "Hash": "qDtlqDrDmeAW4p7QmLcSM89DhHyLFpLoRxtKbZ6E7/8=",
   "Source": "WeddingQuiz",
   "BasePath": "/",
   "Mode": "Root",
@@ -10999,6 +10999,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
+      "Identity": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\Heart_Questionmark.png",
+      "SourceId": "WeddingQuiz",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Heart_Questionmark.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Heart_Questionmark.png"
+    },
+    {
       "Identity": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\icon-192.png",
       "SourceId": "WeddingQuiz",
       "SourceType": "Discovered",
@@ -11073,6 +11092,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\sample-data\\weather.json"
+    },
+    {
+      "Identity": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\WeddingFavicon.png",
+      "SourceId": "WeddingQuiz",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "WeddingFavicon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\WeddingFavicon.png"
     }
   ]
 }
