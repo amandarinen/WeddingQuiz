@@ -19,6 +19,10 @@
             <MudText Typo="Typo.h4" Class="mb-3">Quiz Avslutad!</MudText>
             <MudText Typo="Typo.h5" Class="mb-4">Din poäng: @score / @questions.Count</MudText>
 
+            <MudText Typo="Typo.body1" Class="mb-6 mt-2" Style="font-style: italic; color: var(--dusty-rose); font-weight: 500;">
+                @GetResultText()
+            </MudText>
+
             <div style="display:flex; justify-content:center; width:100%; min-height:60px;">
                 <MudButton Variant="Variant.Filled"
                            Color="Color.Primary"
@@ -260,5 +264,17 @@
         if (answer == questions[currentQuestion].CorrectAnswer) return Color.Success;
         if (answer == selectedAnswer) return Color.Error;
         return Color.Primary;
+    }
+
+    string GetResultText()
+    {
+        return score switch
+        {
+            20 => "Den ultimata livskamraten: Koppla ner internet och släng manualerna – du kan läsa hans tankar. Du är officiellt redo för giftermål!",
+            >= 15 => "En stabil framtida äkta hälft: Imponerande! Du har stenkoll på det mesta. De poäng du missade skyller vi på nerverna, men du har helt klart gjort din hemläxa.",
+            >= 10 => "Vardagshjälten: Du har koll på grunderna, men missade en del detaljer. Kanske dags att börja lyssna lite mer på middagarna och lite mindre på din favoritpodcast?",
+            >= 5 => "Selektiv hörsel?: Du minns det du vill minnas, va? Du fokuserar kanske mer på framtiden än på gamla detaljer, men vilken tur att det alltid kommer nya saker att komma ihåg!",
+            _ => "Tur att ni är snygga!: Har ni ens pratat med varandra sen ni träffades? Resultatet tyder på att ni lagt all tid på hångel och noll tid på frågor. Som tur är har ni hela livet på er att lära känna varandra på djupet!"
+        };
     }
 }
