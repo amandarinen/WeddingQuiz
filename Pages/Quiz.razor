@@ -19,6 +19,10 @@
             <MudText Typo="Typo.h4" Class="mb-3">Quiz Avslutad!</MudText>
             <MudText Typo="Typo.h5" Class="mb-4">Din poäng: @score / @questions.Count</MudText>
 
+            <MudText Typo="Typo.body1" Class="mb-6 mt-2" Style="font-style: italic; color: var(--dusty-rose); font-weight: 500;">
+                @GetResultText()
+            </MudText>
+
             <div style="display:flex; justify-content:center; width:100%; min-height:60px;">
                 <MudButton Variant="Variant.Filled"
                            Color="Color.Primary"
@@ -236,5 +240,16 @@
         if (answer == questions[currentQuestion].CorrectAnswer) return Color.Success;
         if (answer == selectedAnswer) return Color.Error;
         return Color.Primary;
+    }
+
+    string GetResultText()
+    {
+        return score switch
+        {
+            15 => "Den inofficiella tredjeparten: Full pott! Vi överväger att skaffa besöksförbud. Du vet förmodligen mer om deras privatliv än vad de gör själva - grattis, du är i praktiken gift med dem båda (vare sig de vill det eller ej).",
+            >= 10 => "Den lojala stalkern: Du har stenkoll på varenda Instagram-story och minns detaljer från fyllesnack år 2019. Din hängivelse är beundransvärd!",
+            >= 5 => "Bekant-vibb: Du har koll på det viktigaste, men du lyssnar kaaanske för lite när de pratar. Lägg ifrån dig mobilen nästa gång ni ses!",
+            _ => "Den objudna gästen: Är du säker på att du har gått på rätt fest? Det är nog dags att börja stalka dem på riktigt så att du slipper gissa dig fram i livet!"
+        };
     }
 }

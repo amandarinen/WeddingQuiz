@@ -13,12 +13,16 @@
       "PackagePath": "staticwebassets\\WeddingQuiz.styles.css"
     },
     {
-      "Id": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\Heart_Questionmark.png",
-      "PackagePath": "staticwebassets\\Heart_Questionmark.png"
+      "Id": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\Green_Ring_Questionmark-removebg-preview.png",
+      "PackagePath": "staticwebassets\\Green_Ring_Questionmark-removebg-preview.png"
     },
     {
-      "Id": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\WeddingFavicon.png",
-      "PackagePath": "staticwebassets\\WeddingFavicon.png"
+      "Id": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\Heart_Questionmark-removebg-preview.png",
+      "PackagePath": "staticwebassets\\Heart_Questionmark-removebg-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\WeddingFavicon-removebg-preview.png",
+      "PackagePath": "staticwebassets\\WeddingFavicon-removebg-preview.png"
     },
     {
       "Id": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\css\\app.css",

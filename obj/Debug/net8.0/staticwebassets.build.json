@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qDtlqDrDmeAW4p7QmLcSM89DhHyLFpLoRxtKbZ6E7/8=",
+  "Hash": "RlH6bOYJVG4FXVizTlU1PihyPnGN/xypx1FK3FHNdcM=",
   "Source": "WeddingQuiz",
   "BasePath": "/",
   "Mode": "Root",
@@ -10999,12 +10999,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\Heart_Questionmark.png",
+      "Identity": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\Green_Ring_Questionmark-removebg-preview.png",
       "SourceId": "WeddingQuiz",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "Heart_Questionmark.png",
+      "RelativePath": "Green_Ring_Questionmark-removebg-preview.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11015,7 +11015,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Heart_Questionmark.png"
+      "OriginalItemSpec": "wwwroot\\Green_Ring_Questionmark-removebg-preview.png"
+    },
+    {
+      "Identity": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\Heart_Questionmark-removebg-preview.png",
+      "SourceId": "WeddingQuiz",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Heart_Questionmark-removebg-preview.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Heart_Questionmark-removebg-preview.png"
     },
     {
       "Identity": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\icon-192.png",
@@ -11094,12 +11113,12 @@
       "OriginalItemSpec": "wwwroot\\sample-data\\weather.json"
     },
     {
-      "Identity": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\WeddingFavicon.png",
+      "Identity": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\WeddingFavicon-removebg-preview.png",
       "SourceId": "WeddingQuiz",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\amand\\source\\repos\\WeddingQuiz\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "WeddingFavicon.png",
+      "RelativePath": "WeddingFavicon-removebg-preview.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11110,7 +11129,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\WeddingFavicon.png"
+      "OriginalItemSpec": "wwwroot\\WeddingFavicon-removebg-preview.png"
     }
   ]
 }
