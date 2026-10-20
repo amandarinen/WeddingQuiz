@@ -33,7 +33,7 @@ The design was created specifically for the occasion, with a soft wedding-inspir
 ![WeddingQuiz Question](images/quiz.png)
 
 ### Results
-![WeddingQuiz Results](images/results.png)
+![WeddingQuiz Results](images/result.png)
 
 ## Built With
 
